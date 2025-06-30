@@ -2,7 +2,7 @@ import sys
 
 
 def error_message_details(error,error_details:sys):
-    _,_,exc_tb = sys.exc_info()
+    exc_name,exc_type,exc_tb = sys.exc_info()
     file_name = exc_tb.tb_frame.f_code.co_filename
     error_message = f"Error occur in python script name {file_name} in the line {exc_tb.tb_lineno} and error message is {str(error)}"
     return error_message
