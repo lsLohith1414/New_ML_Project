@@ -3,9 +3,10 @@ import os
 import pandas as pd
 import numpy as np
 from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import OneHotEncoder,StandardScaler
+
 from sklearn.pipeline import Pipeline
 from sklearn.compose import ColumnTransformer
-from sklearn.preprocessing import OneHotEncoder,StandardScaler
 
 from dataclasses import dataclass
 

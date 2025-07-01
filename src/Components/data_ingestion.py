@@ -9,6 +9,7 @@ from sklearn.model_selection import train_test_split
 
 from src.Components.data_transformation import DataTransformation
 from src.Components.data_transformation import DataTransformationConfig
+from src.Components.model_trainer import ModelTrainerConfig,ModelTrainer
 
 
 @dataclass
@@ -63,9 +64,13 @@ if __name__=="__main__":
     train_data,test_data =data_ingst.initiate_data_ingestion()
     
     data_transformation = DataTransformation()
-    data_transformation.initiate_data_transformation(train_data,test_data)
+    train_arr,test_arr,_ = data_transformation.initiate_data_transformation(train_data,test_data)
 
+    modelTrainer = ModelTrainer()
 
+    Best_model_name,r2score = modelTrainer.initiate_model_trainer(train_arr,test_arr)
+
+    print(f"Best model is [{Best_model_name}] and It's R2 score is [{r2score}]")
 
 
 
