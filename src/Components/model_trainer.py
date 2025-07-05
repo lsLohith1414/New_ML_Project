@@ -79,6 +79,7 @@ class ModelTrainer:
                 },
                 "Linear Regressor":{},
                 "K-Neighbors Regressor":{
+                    
                     'n_neighbors':[5,7,9,11],
                     # 'weights':['uniform','distance'],
                     # 'algorithm':['ball_tree','kd_tree','brute']
