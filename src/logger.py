@@ -9,7 +9,7 @@ LOG_DIR = os.path.join(os.getcwd(), "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
 # Generate log file name with timestamp
-LOG_FILE = f"{datetime.now().strftime('%d_%m_%Y_%H_%M_%S')}.log"
+LOG_FILE = f"{datetime.now().strftime('%Y_%m_%d_%H_%M_%S')}.log"
 LOG_FILE_PATH = os.path.join(LOG_DIR, LOG_FILE)
 
 # Set up logging

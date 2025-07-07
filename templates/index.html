@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Performance Analysis</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome for icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      background: url('/mnt/data/ad864d07-bf45-4ea7-a442-902488c73eb1.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #ffffff;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.75);
+      min-height: 100vh;
+      padding: 0 20px;
+    }
+
+    /* NAVIGATION BAR */
+    nav {
+      background-color: rgba(30, 30, 30, 0.9);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      color: #00ffff;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #00ffff;
+    }
+
+    .main-content {
+      max-width: 800px;
+      margin: 60px auto;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .main-content h1 {
+      font-size: 36px;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+
+    .main-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #cfd8dc;
+    }
+
+    .main-content .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 24px;
+      background-color: #00bcd4;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .main-content .btn:hover {
+      background-color: #00acc1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .main-content h1 {
+        font-size: 28px;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul li {
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="overlay">
+    <!-- NAVBAR -->
+    <nav>
+      <div class="logo"><i class="fas fa-user-graduate"></i> Student Analysis</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="/predictdata">Predict</a></li>
+
+      </ul>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <h1>Welcome to Student Performance Analysis</h1>
+      <p>
+        This application helps analyze and predict a student's mathematics performance based on various factors 
+        such as gender, parental education, test preparation, and more. Our machine learning model provides accurate 
+        predictions using advanced data science techniques.
+      </p>
+
+      <p>
+        Empower students and teachers with insights to improve learning outcomes. Make data-driven decisions and understand 
+        key performance indicators that influence academic success.
+      </p>
+
+      <a class="btn" href="/predictdata"><i class="fas fa-chart-line"></i> Start Prediction</a>
+    </div>
+  </div>
+</body>
+</html>
